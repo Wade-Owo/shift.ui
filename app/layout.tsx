@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Shift",
   description: "Zazu Shift is a SaaS bases timekeeping solution for managing shifts, overtime and leave requests",
 };
-
+//use state that if logged in is true then display the home page which is body else display defualt page
 export default function RootLayout({
   children,
 }: Readonly<{
