@@ -6,7 +6,8 @@ import { useState } from "react";
 export default function Navigation() {
   const [open, setOpen] = useState(false);
   return (
-    <aside className="w-64 h-screen flex flex-col space-y-4 bg-gray p-4 text-black shadow">
+    // can do h-screen for it to be just the screen height
+    <aside className="w-64 min-h-screen flex flex-col space-y-4 bg-gray p-4 text-black shadow">
         <ul className="menu menu-vertical justify-items-center">
             <li className="pb-30">
                 <button>
@@ -133,6 +134,7 @@ export default function Navigation() {
                                 strokeLinejoin="round" 
                                 d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
                             </svg>
+
                             <span className="text-base">Timesheets</span>
                         </h2>
                     </Link>
@@ -248,23 +250,21 @@ export default function Navigation() {
                 
             <li className="pt-3">
                 <button>
-                    <Link href='/log-out'>
-                        <h2 className="flex items-center space-x-2">
-                            <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            fill="none" 
-                            viewBox="0 0 24 24" 
-                            strokeWidth={1.5} 
-                            stroke="currentColor" 
-                            className="size-5">
-                                <path strokeLinecap="round" 
-                                strokeLinejoin="round" 
-                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-                            </svg>
+                    <h2 className="flex items-center space-x-2">
+                        <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        strokeWidth={1.5} 
+                        stroke="currentColor" 
+                        className="size-5">
+                            <path strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                        </svg>
 
-                            <span className="text-base">Log Out</span>
-                        </h2>
-                    </Link>
+                        <span className="text-base">Log Out</span>
+                    </h2>
                 </button>
             </li>
 
@@ -272,8 +272,9 @@ export default function Navigation() {
             {/* fixed to the bottom is the profile */}
             
             {/* use state variable like 'isloggedin' and if not it shows default, if the user is then pull user photo, name and email*/}
-
-            <li className="absolute bottom-0 left-0 pb-5 pl-3">
+            
+            {/* or change to absolute */}
+            <li className="fixed bottom-0 left-0 pb-5 pl-3">
                 <button>
                     <Link href='/profile'>
                         <div className="flex items-center space-x-2 text-3xl text-bold">   

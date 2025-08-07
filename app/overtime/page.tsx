@@ -24,7 +24,7 @@ export default function Overtime() {
                     {/* right side */}
                     <div>
                         <button className="btn btn-primary">
-                            <Link href='/overtime-request-form'>
+                            <Link href='../overtimerequestpage/'>
                                 <h1 className="flex items-center space-x-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-5">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
